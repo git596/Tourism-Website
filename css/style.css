@@ -54,35 +54,62 @@ section {
     }
   }
 
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
 .gallery img {
-    width: 30%;
+    width: 90%;
     height: 260px;
     margin: 10px;
     border-radius: 8px;
     transition: transform 0.2s; 
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    object-fit: cover;
 }
 
 .gallery img:hover {
     transform: scale(1.1); 
 }
 
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .gallery img {
+      width: 55%;
+      height: 70%;
+    }
+  }
+  
+  /* Media query for very small screens */
+  @media (max-width: 480px) {
+    .gallery img {
+      width: 70%;
+      height: 160px;
+    }
+  }
+
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    max-width: 300px;
+    gap: 10px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
 .form-group {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .form-group label {
-    min-width: 120px;
-    padding-right: 10px;
+    min-width: 90px;
+    padding-right: 5px;
+    padding-top: 10px;
     text-align: left;
     font-weight: bold;
 }
@@ -247,7 +274,7 @@ nav {
     }
     /* Style the dropdown menu for small screens */
     #dropdown-menu {
-      display: block;
+      display: none;
       position: relative;
       top: 0;
       left: 0;
@@ -273,8 +300,9 @@ nav {
     }
     /* Make the hamburger menu larger */
     .hamburger-menu {
-      width: 40px;
+      width: 30px;
       height: 40px;
+      padding-right: 5px;
     }
     .hamburger-menu .line {
       width: 40px;
@@ -344,7 +372,7 @@ nav {
       margin-bottom: 10px;
     }
     .contact-info p {
-      margin-bottom: 5px;
+      margin-bottom: 20px;
     }
   }
 
