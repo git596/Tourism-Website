@@ -59,6 +59,9 @@ function bookHotel() {
         children,
         roomType,
     });
+
+    //clear the form
+    document.getElementById('hotelBookingForm').reset();
 }
 
 // Automatically close dropdown when clicking outside of it
