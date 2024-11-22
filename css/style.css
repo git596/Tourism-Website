@@ -25,6 +25,35 @@ section {
     text-align: center;
 }
 
+/* Make the form responsive */
+#hotelBookingForm {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Adjust form group layout on smaller screens */
+  @media (max-width: 768px) {
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .form-group input, .form-group select {
+      width: 100%;
+    }
+  }
+  
+  /* Adjust button layout on smaller screens */
+  @media (max-width: 480px) {
+    button[type="button"] {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+
 .gallery img {
     width: 30%;
     height: 260px;
@@ -140,14 +169,32 @@ header h1 {
 }
 
 nav {
-    position: relative;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
 
 /* Dropdown menu styles */
 #dropdown-menu {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: none; /* Hidden by default */
     position: absolute;
     top: 100%;
@@ -160,6 +207,7 @@ nav {
 #dropdown-menu li {
     padding: 10px 20px;
     text-align: left;
+    margin-bottom: 10px;
 }
 
 #dropdown-menu li a {
@@ -185,7 +233,54 @@ nav {
     width: 25px;
     height: 3px;
     background-color: white;
+    margin-bottom: 5px;
 }
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    /* Hide the navigation links and show the hamburger menu */
+    nav ul {
+      display: none;
+    }
+    .hamburger-menu {
+      display: block;
+    }
+    /* Style the dropdown menu for small screens */
+    #dropdown-menu {
+      display: block;
+      position: relative;
+      top: 0;
+      left: 0;
+      background-color: #333;
+      padding: 20px;
+      border: none;
+    }
+    #dropdown-menu li {
+      margin-bottom: 10px;
+    }
+  }
+
+  /* Media query for very small screens */
+@media (max-width: 480px) {
+    /* Make the header full-width */
+    header {
+      padding: 10px;
+    }
+    /* Make the navigation full-width */
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+    /* Make the hamburger menu larger */
+    .hamburger-menu {
+      width: 40px;
+      height: 40px;
+    }
+    .hamburger-menu .line {
+      width: 40px;
+      height: 5px;
+    }
+  }
 
 .material-icons {
     color: #138eb0;
