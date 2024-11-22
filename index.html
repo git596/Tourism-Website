@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Sri Lanka</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center; text-justify: inter-word;">
+            Explore Sri Lanka
+        </h1>
+        <nav>
+            <ul>
+                <a href="#hotels">Hotels</a>
+                <a href="#locations">Locations</a>
+                <a href="#contact">Contact</a>
+            </ul>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <!-- Three lines for the menu icon -->
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul id="dropdown-menu">
+                <li><a href="#hotels">Hotels</a></li>
+                <li><a href="#locations">Locations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <section id="hotels">
+        <h2 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: #3da10b;">
+            <!-- <i class="material-icons">home</i> -->
+            Plan Your Holiday
+          </h2>
+        <form id="hotelBookingForm">
+            <!-- Personal Details -->
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+            </div>
+    
+            <!-- Booking Dates -->
+            <div class="form-group">
+                <label for="checkin">Check-In Date:</label>
+                <input type="date" id="checkin" name="checkin" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="checkout">Check-Out Date:</label>
+                <input type="date" id="checkout" name="checkout" required>
+            </div>
+    
+            <!-- Number of Guests -->
+            <div class="form-group">
+                <label for="adults">Adults:</label>
+                <input type="number" id="adults" name="adults" placeholder="Number of Adults" min="1" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="children">Children:</label>
+                <input type="number" id="children" name="children" placeholder="Number of Children" min="0" required>
+            </div>
+    
+            <!-- Room Type -->
+            <div class="form-group">
+                <label for="roomType">Room Type:</label>
+                <select id="roomType" name="roomType" required>
+                    <option value="" disabled selected>Select Room Type</option>
+                    <option value="single">Single</option>
+                    <option value="double">Double</option>
+                    <option value="suite">Suite</option>
+                </select>
+            </div>
+    
+            <!-- Submit -->
+            <button type="button" onclick="bookHotel()">Book Now</button>
+        </form>
+    </section>
+    
+    
+
+    <section id="locations">
+        <h2>Top Locations</h2>
+        <div class="gallery">
+            <a href="https://sigiriyafortress.com">
+                <img src="images/Sigiriya.png" alt="Sigiriya Rock">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Galle_Fort">
+                <img src="images/Galle.jpg" alt="Galle Fort">
+            </a>
+            <a href="https://ellaguide.com">
+                <img src="images/Ella.jpg" alt="Ella Sri Lanka">
+            </a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <form id="contactForm">
+            <!-- <label for="fullName">Full Name:</label> -->
+            <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+    
+            <!-- <label for="email">Email:</label> -->
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+    
+            <!-- <label for="phone">Phone Number:</label> -->
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+    
+            <!-- <label for="message">Message:</label> -->
+            <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
+    
+            <button type="button" onclick="submitForm()">Send Message</button>
+        </form>
+    </section>
+    
+
+    <footer id="contact">
+      <div class="footer-container">
+        <div class="footer-left">
+          <span class="material-icons">airplanemode_active</span>
+          <h1 style="font-size: medium; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Tourism Hotline </h1>
+          <p>+94 71 375 3456</p>
+        </div>
+        <div class="footer-middle">
+          <h2>Contact Us</h2>
+          <div class="contact-info">
+            <p>
+              <a href="mailto:info@exploreSriLanka.com"><span class="material-icons">email</span>info@exploreSriLanka.com</a>
+            </p>
+            <a href="https://wa.me/94713753456">
+              <p>
+                <span class="material-icons">phone</span>
+                +94 71 375 3456
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="footer-right">
+          <img src="images/SL.jpg" alt="SL" style="width: 120px; height: 90px; border-radius: 20px;">
+        </div>
+      </div>
+      <hr style="border-top: 1px solid #fff; margin-top: 20px;">
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+            <p style="color: #fff; font-size: medium;">© 2024 All Rights Reserved by Sri Lanka Tourism</p>
+          <a href="#" style="color: #fff;">Privacy Policy</a> | <a href="#" style="color: #fff;">Terms & Conditions</a>
+        </div>
+        <!-- <div class="footer-bottom-right">
+          <a href="#" target="_blank"><span class="material-icons">facebook</span></a>
+          <a href="#" target="_blank"><span class="material-icons">twitter</span></a>
+          <a href="#" target="_blank"><span class="material-icons">instagram</span></a>
+          <a href="#" target="_blank"><span class="material-icons">linkedin</span></a>
+        </div> -->
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
