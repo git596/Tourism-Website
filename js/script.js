@@ -1,7 +1,9 @@
 // Toggle the dropdown menu
 function toggleMenu() {
     const menu = document.getElementById('dropdown-menu');
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
     menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    hamburgerMenu.style.display = hamburgerMenu.style.display === 'none' ? 'block' : 'none';
 }
 
 // Hotel booking function
@@ -71,6 +73,7 @@ window.addEventListener('click', function (event) {
 
     if (menu.style.display === 'block' && !menu.contains(event.target) && !hamburgerMenu.contains(event.target)) {
         menu.style.display = 'none';
+        hamburgerMenu.style.display = 'block'; // Show hamburger menu again
     }
 });
 

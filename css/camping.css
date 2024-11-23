@@ -1,0 +1,145 @@
+/* General Reset */
+body, h1, h2, h3, p, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+  }
+  
+  header {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  #interactive-title {
+    font-size: 2rem;
+    color: #2c3e50;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  #interactive-title:hover {
+    transform: scale(1.1);
+    color: #1abc9c;
+  }
+  
+  #back-home {
+    padding: 10px 20px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #back-home:hover {
+    background-color: #16a085;
+  }
+  
+  .advertisement {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .advertisement h2 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 40px;
+  }
+  
+  .ad-image {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    animation: zoomInOut 10s infinite alternate ease-in-out;
+  }
+
+  @keyframes zoomInOut {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
+  .packages {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* color: #1abc9c; */
+  }
+
+  .packages h2 {
+    color: #3da10b;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .package-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .package {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: #a5dfeb;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .package:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .package h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .package p {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .package-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    #interactive-title {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .package-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    #interactive-title {
+      font-size: 1.5rem;
+    }
+
+    .advertisement h2 {
+        margin-bottom: 20px;
+    }
+  
+    #back-home {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  

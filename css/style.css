@@ -6,19 +6,263 @@ body {
     background-color: #f4f4f9;
 }
 
-header {
-    background-color: #138eb0;
-    color: white;
+header nav a {
+    margin: 0 10px;
+    color: rgb(15, 248, 50);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: x-large;
+    text-decoration: underline #69e42c;
+}
+
+.header-background {
+    background-image: url('../images/SL_background.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    filter: brightness(90%);
+}
+
+
+/* Styles for small screens (e.g. mobile phones) */
+@media (max-width: 480px) {
+    .header-background {
+        height: 30vh;
+        background-size: 100% auto;
+        background-size: cover;
+    }
+}
+
+/* Styles for very small screens (e.g. old mobile phones) */
+@media (max-width: 320px) {
+    .header-background {
+        height: 20vh;
+        background-size: 100% auto;
+        background-size: cover;
+    }
+}
+
+/* Style for the welcome text */
+.welcome-text h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    width: 60%;
+    z-index: 10; /* Ensures the text appears above other elements */
+}
+
+.welcome-text p {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    width: 60%;
+    z-index: 10; /* Ensures the text appears above other elements */
+}
+
+/* Adjust font size and layout for smaller screens */
+@media (max-width: 768px) {
+    .welcome-text {
+        font-size: 36px; /* Reduce font size */
+        width: 80%; /* Adjust width */
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-text h2 {
+        font-size: 18px; /* Further reduce font size */
+        width: 90%; /* Increase width to fit the screen */
+    }
+
+    .welcome-text p {
+        font-size: 12px;
+      }
+}
+
+
+  /* Styles for the header and navigation */
+  header {
+    background-color: rgb(19, 142, 176);
+    color: rgb(15, 248, 50);
     padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
     text-align: center;
 }
 
-header nav a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+header h1 {
+    margin: 0;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    text-shadow: #3da10b;
+    font-weight: bolder;
+    font-size: 32px;
+
 }
+
+nav {
+    /* display: flex; */
+    justify-content: space-between;
+    /* align-items: center; */
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+
+/* Dropdown menu styles */
+#dropdown-menu {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #138eb0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#dropdown-menu li {
+    padding: 5px 10px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+#dropdown-menu li a {
+    text-decoration: none;
+    color: rgb(61, 161, 11);
+    display: block;
+    font-size: small;
+}
+
+#dropdown-menu li a:hover {
+    background-color: #0e6d8c;
+}
+
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none; /* Hidden on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger-menu .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 5px;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    /* Hide the navigation links and show the hamburger menu */
+    nav ul {
+      display: none;
+    }
+    .hamburger-menu {
+      display: block;
+    }
+
+    header h1 {
+        font-size: 22px;
+        width: 30%;
+      }
+
+    /* Style the dropdown menu for small screens */
+    #dropdown-menu {
+      display: none;
+      position: relative;
+      top: 0;
+      left: 0;
+      background-color: #333;
+      padding: 20px;
+      border: none;
+      height: 15%;
+    }
+    #dropdown-menu li {
+      margin-bottom: 5px;
+    }
+
+    #dropdown-menu li a {
+        /* font-size: 10px; */
+        color: rgb(61, 161, 11);
+    }
+  }
+
+  /* Media query for very small screens */
+@media (max-width: 480px) {
+    /* Make the header full-width */
+    header {
+      padding: 10px;
+    }
+
+    header h1 {
+      font-size: 16px;
+      width: 50%;
+    }
+
+    /* Make the navigation full-width */
+    nav {
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+    }
+
+    #dropdown-menu {
+      display: none;
+      position: relative;
+      top: 0;
+      left: 0;
+      background-color: #333;
+      padding: 10px;
+      padding-left: 0px;
+      border: none;
+      height: 40%;
+      width: 60%;
+    }
+
+    #dropdown-menu li {
+        margin-bottom: 3px;
+      }
+
+    #dropdown-menu li a {
+        font-size: 10px;
+        color: #3da10b;
+    }
+
+    /* Make the hamburger menu larger */
+    .hamburger-menu {
+      width: 30px;
+      height: 40px;
+      padding-right: 5px;
+    }
+    .hamburger-menu .line {
+      width: 30px;
+      height: 5px;
+    }
+  }
 
 section {
     padding: 2em;
@@ -160,7 +404,7 @@ footer#contact {
   }
   
   .contact-info p {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   
   .contact-info i {
@@ -177,138 +421,7 @@ footer#contact {
     color: #ccc;
   }
 
-  /* Styles for the header and navigation */
-header {
-    background-color: #138eb0;
-    color: white;
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-header h1 {
-    margin: 0;
-    text-align: center;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  nav ul li {
-    margin-right: 20px;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-  }
-
-/* Dropdown menu styles */
-#dropdown-menu {
-    list-style: none;
-    margin: 0;
-    padding: 20px;
-    display: none; /* Hidden by default */
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #138eb0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#dropdown-menu li {
-    padding: 10px 20px;
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-#dropdown-menu li a {
-    text-decoration: none;
-    color: white;
-    display: block;
-}
-
-#dropdown-menu li a:hover {
-    background-color: #0e6d8c;
-}
-
-
-/* Hamburger menu styles */
-.hamburger-menu {
-    display: none; /* Hidden on larger screens */
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-}
-
-.hamburger-menu .line {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin-bottom: 5px;
-}
-
-/* Media query for small screens */
-@media (max-width: 768px) {
-    /* Hide the navigation links and show the hamburger menu */
-    nav ul {
-      display: none;
-    }
-    .hamburger-menu {
-      display: block;
-    }
-    /* Style the dropdown menu for small screens */
-    #dropdown-menu {
-      display: none;
-      position: relative;
-      top: 0;
-      left: 0;
-      background-color: #333;
-      padding: 20px;
-      border: none;
-    }
-    #dropdown-menu li {
-      margin-bottom: 10px;
-    }
-  }
-
-  /* Media query for very small screens */
-@media (max-width: 480px) {
-    /* Make the header full-width */
-    header {
-      padding: 10px;
-    }
-    /* Make the navigation full-width */
-    nav {
-      flex-direction: column;
-      align-items: center;
-    }
-    /* Make the hamburger menu larger */
-    .hamburger-menu {
-      width: 30px;
-      height: 40px;
-      padding-right: 5px;
-    }
-    .hamburger-menu .line {
-      width: 40px;
-      height: 5px;
-    }
-  }
 
 .material-icons {
     color: #138eb0;
