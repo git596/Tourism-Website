@@ -49,8 +49,12 @@ body, h1, h2, h3, p, button {
   }
 
   .advertisement h2 {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     margin-bottom: 40px;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #3da10b;
   }
   
   .ad-image {
@@ -140,6 +144,110 @@ body, h1, h2, h3, p, button {
     #back-home {
       font-size: 0.9rem;
       padding: 8px 16px;
+    }
+  }
+
+  footer#contact {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer#contact h2 {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-info p {
+    margin-bottom: 5px;
+  }
+  
+  .contact-info i {
+    margin-right: 10px;
+    color: #fff;
+  }
+  
+  .contact-info a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    color: #ccc;
+  }
+
+
+
+.material-icons {
+    color: #138eb0;
+    margin-right: 8px;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .footer-left, .footer-middle, .footer-right {
+    flex: 1;
+  }
+  
+  .footer-left {
+    text-align: center;
+  }
+  
+  .footer-middle {
+    text-align: center;
+  }
+  
+  .footer-right {
+    text-align: center;
+  }
+  
+  .contact-info {
+    margin-top: 20px;
+  }
+  
+  .contact-info p {
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  /* Media query for small screens */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-left, .footer-middle, .footer-right {
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Media query for very small screens */
+  @media (max-width: 480px) {
+    .footer-container {
+      padding: 10px;
+    }
+    .footer-left, .footer-middle, .footer-right {
+      margin-bottom: 10px;
+    }
+    .contact-info p {
+      margin-bottom: 20px;
     }
   }
   

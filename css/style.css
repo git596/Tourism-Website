@@ -559,5 +559,66 @@ footer#contact {
     }
 }
 
-/* carousel style */
 
+
+
+
+.contact-number {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #b0d9b9;
+    gap: 3px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* ensure it's on top of other elements */
+    text-align: center;
+  }
+  
+  .contact-number img {
+    width: 25px;
+    height: 25px;
+    margin: 0 auto;
+  }
+  
+  .contact-number p {
+    font-size: 16px;
+    margin: 0;
+    color: #3da10b;
+  }
+  
+  /* Add this for mobile responsiveness */
+  @media (max-width: 768px) {
+    .contact-number {
+      bottom: 10px;
+      right: 10px;
+      padding: 5px;
+    }
+    .contact-number img {
+      width: 16px;
+      height: 16px;
+    }
+    .contact-number p {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-number {
+      bottom: 5px;
+      right: 5px;
+      padding: 2px;
+      height: 15px;
+    }
+    .contact-number img {
+      width: 15px;
+      height: 15px;
+    }
+    .contact-number p {
+      font-size: 8px;
+    }
+  }

@@ -1,0 +1,263 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #007BFF;
+    color: rgb(238, 233, 233);
+    /* display: flex; */
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .page-title {
+    margin: 0 auto;
+  }
+  
+  .home-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .cab-form h2 {
+    text-align: center;
+  }
+
+  .info-section {
+    background-color: #badabb; /* light gray background */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cab-form form {
+    max-width: 500px; /* reduce form width */
+    margin: 0 auto; /* center form */
+    padding: 20px;
+    background-color: #5fd55f;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  fieldset {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bolder;
+  }
+  
+  input,
+  select {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  select {
+    width: 100%;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+ /* Vehicles Section */
+.vehicles {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 10px;
+    scroll-behavior: smooth;
+  }
+  
+  .carousel-item {
+    flex: 0 0 auto;
+    width: 320px; /* Fixed size for cards */
+    height: 220px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+    border-radius: 8px 8px 0 0;
+  }
+  
+  /* Scrollbar styling (optional for better look) */
+  .carousel::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .carousel::-webkit-scrollbar-thumb {
+    background: #007BFF;
+    border-radius: 5px;
+  }
+  
+  .carousel::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .carousel-item {
+      width: 250px; /* Reduce size for smaller screens */
+      height: 180px;
+    }
+  
+    .carousel-item img {
+      height: 150px; /* Adjust height for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel-item {
+      width: 200px; /* Further reduce size for very small screens */
+      height: 140px;
+    }
+  
+    .carousel-item img {
+      height: 120px;
+    }
+  }
+
+
+  footer#contact {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer#contact h2 {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-info p {
+    margin-bottom: 5px;
+  }
+  
+  .contact-info i {
+    margin-right: 10px;
+    color: #fff;
+  }
+  
+  .contact-info a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    color: #ccc;
+  }
+
+
+
+.material-icons {
+    color: #138eb0;
+    margin-right: 8px;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .footer-left, .footer-middle, .footer-right {
+    flex: 1;
+  }
+  
+  .footer-left {
+    text-align: center;
+  }
+  
+  .footer-middle {
+    text-align: center;
+  }
+  
+  .footer-right {
+    text-align: center;
+  }
+  
+  .contact-info {
+    margin-top: 20px;
+  }
+  
+  .contact-info p {
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  /* Media query for small screens */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-left, .footer-middle, .footer-right {
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Media query for very small screens */
+  @media (max-width: 480px) {
+    .footer-container {
+      padding: 10px;
+    }
+    .footer-left, .footer-middle, .footer-right {
+      margin-bottom: 10px;
+    }
+    .contact-info p {
+      margin-bottom: 20px;
+    }
+  }
+  
+  

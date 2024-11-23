@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Rent</title>
+  <link rel="stylesheet" href="css/transport.css">
+  <link rel="stylesheet" href="css/hotel.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <script defer src="js/transport.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="header-nav">
+            <button id="homeButton" onclick="window.location.href='index.html'">← Back to Home</button>
+            <h1 class="title">Rent a vehicle</h1>
+        </nav>
+    </header>
+
+  <main>
+    <!-- Cab Rent Form -->
+    <section class="cab-form">
+      <h2>Need a Cab?</h2>
+      <form>
+        <!-- Pickup Information -->
+        <fieldset class="info-section">
+          <legend>Pickup Information</legend>
+          <label for="pickup-location">Pickup City and Location:</label>
+          <select id="pickup-location">
+            <option value="" disabled selected>Select location</option>
+            <option value="airport">Colombo Bandaranayake Airport</option>
+            <option value="mirissa">Mirissa</option>
+            <option value="negombo">Negombo</option>
+            <option value="colombo">Colombo</option>
+            <option value="weligama">Weligama</option>
+            <option value="galle">Galle</option>
+            <option value="tangalle">Tangalle</option>
+            <option value="ella">Ella</option>
+            <option value="matara">Matara</option>
+            <option value="unawatuna">Unawatuna</option>
+            <option value="hikkaduwa">Hikkaduwa</option>
+            <option value="kandy">Kandy</option>
+            <option value="arugambay">Arugambay</option>
+            <option value="hiriketiya">Hiriketiya</option>
+          </select>
+
+          <label for="pickup-date">Pickup Date:</label>
+          <input type="date" id="pickup-date">
+
+          <label for="pickup-time">Pickup Time:</label>
+          <select id="pickup-time">
+            <option value="" disabled selected>Select time</option>
+            <option value="9">9:00 AM</option>
+            <option value="10">10:00 AM</option>
+            <option value="11">11:00 AM</option>
+            <option value="12">12:00 PM</option>
+            <option value="13">1:00 PM</option>
+            <option value="14">2:00 PM</option>
+            <option value="15">3:00 PM</option>
+            <option value="16">4:00 PM</option>
+            <option value="17">5:00 PM</option>
+          </select>
+        </fieldset>
+
+        <!-- Return Information -->
+        <fieldset class="info-section">
+          <legend>Return Information</legend>
+          <label for="return-location">Return City and Location:</label>
+          <select id="return-location">
+            <option value="" disabled selected>Select location</option>
+            <option value="airport">Colombo Bandaranayake Airport</option>
+            <option value="mirissa">Mirissa</option>
+            <option value="negombo">Negombo</option>
+            <option value="colombo">Colombo</option>
+            <option value="weligama">Weligama</option>
+            <option value="galle">Galle</option>
+            <option value="tangalle">Tangalle</option>
+            <option value="ella">Ella</option>
+            <option value="matara">Matara</option>
+            <option value="unawatuna">Unawatuna</option>
+            <option value="hikkaduwa">Hikkaduwa</option>
+            <option value="kandy">Kandy</option>
+            <option value="arugambay">Arugambay</option>
+            <option value="hiriketiya">Hiriketiya</option>
+          </select>
+
+          <label for="return-date">Return Date:</label>
+          <input type="date" id="return-date">
+
+          <label for="return-time">Return Time:</label>
+          <select id="return-time">
+            <option value="" disabled selected>Select time</option>
+            <option value="9">9:00 AM</option>
+            <option value="10">10:00 AM</option>
+            <option value="11">11:00 AM</option>
+            <option value="12">12:00 PM</option>
+            <option value="13">1:00 PM</option>
+            <option value="14">2:00 PM</option>
+            <option value="15">3:00 PM</option>
+            <option value="16">4:00 PM</option>
+            <option value="17">5:00 PM</option>
+          </select>
+        </fieldset>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </section>
+
+    <!-- Our Vehicles Section -->
+    <section class="vehicles">
+      <h2>Our Vehicles</h2>
+      <div class="carousel">
+        <div class="carousel-item"><img src="images/v1.png" alt="Vehicle 1"></div>
+        <div class="carousel-item"><img src="images/v2.jpg" alt="Vehicle 2"></div>
+        <div class="carousel-item"><img src="images/v3.png" alt="Vehicle 3"></div>
+        <div class="carousel-item"><img src="images/v7.jpg" alt="Vehicle 4"></div>
+        <div class="carousel-item"><img src="images/v5.jpg" alt="vehicle 5"></div>
+        <div class="carousel-item"><img src="images/v6.png" alt="Vehicle 6"></div>
+        <div class="carousel-item"><img src="images/v7.jpg" alt="Vehicle 7"></div>
+        <div class="carousel-item"><img src="images/v1.png" alt="Vehicle 1"></div>
+        <div class="carousel-item"><img src="images/v1.png" alt="Vehicle 4"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-container">
+      <div class="footer-left">
+          <span><img src="images/receiver.png" alt="Instagram" style="width: 25px; height: 25px;"></span>
+          <h1 style="font-size: medium; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Tourism Hotline </h1>
+        <p>+94 71 375 3456</p>
+      </div>
+      <div class="footer-middle">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+          <p>
+              <a href="mailto:info@exploreSriLanka.com">
+                  <span>
+                      <img src="images/gmail.png" alt="Instagram" style="width: 25px; height: 25px;">
+                  </span>
+                  info@exploreSriLanka.com
+              </a>
+          </p>
+          <a href="https://wa.me/94713753456">
+            <p>
+              <span><img src="images/whatsapp.png" alt="Instagram" style="width: 25px; height: 25px;"></span>
+              +94 71 919 3440
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="footer-right">
+          <h1 style="font-size: medium; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Follow us on</h1>
+          <span><img src="images/facebook.png" alt="Instagram" style="width: 25px; height: 25px;"></span>
+          <!-- <span class="material-icons">instagram</span>
+          <span class="material-icons">telegram</span> -->
+      </div>
+    </div>
+    <hr style="border-top: 1px solid #fff; margin-top: 20px;">
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+          <p style="color: #fff; font-size: medium;">© 2024 All Rights Reserved by Sri Lanka Tourism</p>
+        <a href="#" style="color: #fff;">Privacy Policy</a> | <a href="#" style="color: #fff;">Terms & Conditions</a>
+      </div>
+      <!-- <div class="footer-bottom-right">
+        <a href="#" target="_blank"><span class="material-icons">facebook</span></a>
+        <a href="#" target="_blank"><span class="material-icons">twitter</span></a>
+        <a href="#" target="_blank"><span class="material-icons">instagram</span></a>
+        <a href="#" target="_blank"><span class="material-icons">linkedin</span></a>
+      </div> -->
+    </div>
+  </footer>
+</body>
+</html>
